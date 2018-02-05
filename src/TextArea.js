@@ -9,13 +9,11 @@ const TextArea = ({
 }) => (
     <Form>
         <FormGroup controlId="formBasicText" bsSize="large">
-            <Col componentClass={ControlLabel} sm={8}>Last 4 digits of your phone number</Col>
-            <Col sm={4}>
-                <FormControl type="text" maxLength="4" value={inputText} disabled={!imageIsSelected} onChange={onInputTextChange} placeholder={imageIsSelected
-                    ? 'Enter last 4 digits of your phone number'
-                    : 'Select an image before entering text.'
-                }/>
-            </Col>
+            <ControlLabel>Last 4 digits of your phone number</ControlLabel>
+            <FormControl type="text" maxLength="4" value={inputText} disabled={!imageIsSelected} onChange={onInputTextChange} placeholder={imageIsSelected
+                ? 'Enter last 4 digits of your phone number'
+                : 'Select an image before entering text.'
+            }/>
         </FormGroup>
     </Form>
 )
